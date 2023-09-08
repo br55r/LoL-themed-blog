@@ -1,0 +1,14 @@
+<%= stylesheet_link_tag 'lol_blog' %>
+
+<h1>Welcome to my brans league of legends Blog!</h1>
+
+<p style="color: green"><%= notice %></p>
+
+<h1>Posts</h1>
+
+<% @posts.each do |post| %>
+  <div class="post">
+    <h3>Summoner's Post: <%= link_to post.title, post %></h3>
+    <p><%= post.content.truncate(50) %>...</p>
+  </div>
+<% end %>
